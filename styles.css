@@ -1,0 +1,50 @@
+.communism {
+    background-image: url("images/communism.jpg")
+}
+
+.communism-header {
+    margin: 0.001em;
+    padding-top: .001em;
+    font-weight: bold;
+    background-color: rgba(0,0,0,.25);
+    font-size: 7em;
+    color: red;
+    animation-name: seizure;
+    animation-duration: .1s;
+    animation-iteration-count: infinite;
+}
+
+.communism-title {
+    margin: 0;
+    padding: 0;
+    color: yellow;
+    animation-name: seizure2;
+    animation-duration: .27s;
+    animation-iteration-count: infinite
+}
+
+@keyframes seizure {
+    from {background-color: rgba(255,0,0,.2);}
+    to{background-color: rgba(255, 255, 0, .8);}
+}
+
+@keyframes seizure2 {
+    from{color: yellow;}
+    to{color: red;}
+}
+
+.btn-communism{
+    color: black;
+    background-color: red;
+    border-color: black;
+    font-size: 2em;
+    margin: .5em;
+}
+
+.btn-communism:hover{
+    background-color: crimson;
+}
+
+.btn:hover{
+    cursor: pointer;
+}

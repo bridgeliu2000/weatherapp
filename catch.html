@@ -1,0 +1,63 @@
+<html>
+    <head>
+        <title>catch rate simulator</title>
+        <script type='text/javascript' src="catchRate.js"></script>
+    </head>
+    <body>
+        <header>
+            <a href="Homepage.html">Home</a>
+        </header>
+        <section>
+            <h1>Catch rate simulator</h1>
+            <div> <!--inputs-->
+                <p> <!--base catch rate-->
+                    catch rate:
+                    <input type="text" id="rateinput" value = 255>
+                </p>
+                <p> <!--health modifier-->
+                    Health %: 
+                    <input type="range" min="1" max="100" value="100" onchange='updateVal(this.value)'>
+                    <input type="text" value='100' id='healthinput'>
+                </p>
+                <p> <!--ball modifier-->
+                    Ball used:
+                        <select name="" id="ballinput">
+                            <option value="Pokeball">Pokeball</option>
+                            <option value="Great ball">Great ball</option>
+                            <option value="Ultra ball">Ultra ball</option>
+                        </select>
+                </p>
+                <P> <!--status modifier-->
+                    Status: 
+                    <select id="statusinput">
+                        <option value="none">None</option>
+                        <option value="paralysis">Paralysis</option>
+                        <option value="sleep">Sleep</option>
+                        <option value="burned">Burned</option>
+                        <option value="poisoned">Poisoned</option>
+                        <option value="frozen">Frozen</option>
+                    </select>
+                </P>
+            </div>    
+            <hr>
+            <div> <!--catch button-->
+                <button onclick='simulateCatch()'>press here to catch</button>
+            </div>    
+            <hr>    
+            <div> <!--results section-->
+                <p id='result'>Result: </p>
+                <hr>
+                <p id='chance0'>Chance for no shakes:</p>
+                <p id='chance1'>Chance for one shake:</p>
+                <p id='chance2'>Chance for two shakes:</p>
+                <p id='chance3'>Chance for three shakes:</p>
+                <p id='chanceCatch'>Chance for catch:</p>
+                <hr>
+                <p id='rate'>Modified catch rate:</p>
+                <p id='ball'>Pokeball modifier:</p>
+                <p id="status">Status modifier: </p>
+                <p id="health">Health:</p>
+            </div>
+        </section>
+    </body>
+</html>
